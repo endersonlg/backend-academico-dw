@@ -1,0 +1,72 @@
+
+/** ------------------------------------------------------
+ * THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+ * -------------------------------------------------------
+ */
+
+/* tslint:disable */
+/* eslint-disable */
+export abstract class IQuery {
+    abstract getStatisticsAluno(): Statistic | Promise<Statistic>;
+}
+
+export class Statistic {
+    statisticAge?: StatisticAge[];
+    statisticCity?: StatisticCity[];
+    statisticEtnia?: StatisticEtnia[];
+    statisticFamilyIncome?: StatisticFamilyIncome[];
+    statisticSchool?: StatisticSchool[];
+    statisticSexo?: StatisticSexo[];
+    statisticSituationRegistration?: StatisticSituationRegistration[];
+    statisticState?: StatisticState[];
+    statisticStateCity?: StatisticStateCity[];
+    total?: Number;
+}
+
+export class StatisticAge {
+    age?: string;
+    quantity?: Number;
+}
+
+export class StatisticCity {
+    city?: string;
+    quantity?: Number;
+}
+
+export class StatisticEtnia {
+    etnia?: string;
+    quantity?: Number;
+}
+
+export class StatisticFamilyIncome {
+    familyIncome?: string;
+    quantity?: Number;
+}
+
+export class StatisticSchool {
+    quantity?: Number;
+    school?: string;
+}
+
+export class StatisticSexo {
+    quantity?: Number;
+    sexo?: string;
+}
+
+export class StatisticSituationRegistration {
+    quantity?: Number;
+    situationRegistration?: string;
+}
+
+export class StatisticState {
+    quantity?: Number;
+    state?: string;
+}
+
+export class StatisticStateCity {
+    city?: string;
+    quantity?: Number;
+    state?: string;
+}
+
+export type Number = any;

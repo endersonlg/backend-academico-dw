@@ -1,0 +1,11 @@
+CREATE TABLE aluno1 (
+    cpf varchar(255),
+    etnia varchar(255),
+    sexo varchar(1),
+    escola_origem varchar(255),
+	renda_familiar varchar(255),
+	estado varchar(255),
+    cidade varchar(255),
+	data_nascimento DATE,
+	matr_situacao varchar(255)
+);

@@ -1,0 +1,17 @@
+{
+  "node": {
+      "port": 3333,
+      "env": "development"
+  },
+  "database": [
+      {
+          "configName": "dw_aca_vest",
+          "client": "postgres",
+          "host": "localhost",
+          "port": 5432,
+          "user": "postgres",
+          "password": "123",
+          "database":"dw_aca_vest"
+      }
+  ]
+}

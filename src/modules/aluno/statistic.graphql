@@ -1,0 +1,65 @@
+scalar Date
+scalar Number
+
+type StatisticEtnia {
+    etnia: String
+    quantity: Number
+}
+
+type StatisticSchool {
+    school: String
+    quantity: Number
+}
+
+type StatisticSexo {
+    sexo: String
+    quantity: Number
+}
+
+type StatisticFamilyIncome {
+    familyIncome: String
+    quantity: Number
+}
+
+type StatisticState {
+    state: String
+    quantity: Number
+}
+
+type StatisticCity {
+    city: String
+    quantity: Number
+}
+
+type StatisticStateCity {
+    state: String
+    city: String
+    quantity: Number
+}
+
+type StatisticAge {
+    age: String
+    quantity: Number
+}
+
+type StatisticSituationRegistration {
+    situationRegistration: String
+    quantity: Number
+}
+
+type Statistic {
+    total: Number
+    statisticEtnia: [StatisticEtnia]
+    statisticSchool: [StatisticSchool]
+    statisticSexo: [StatisticSexo]
+    statisticFamilyIncome: [StatisticFamilyIncome]
+    statisticState: [StatisticState]
+    statisticCity: [StatisticCity]
+    statisticStateCity: [StatisticStateCity]
+    statisticAge: [StatisticAge]
+    statisticSituationRegistration: [StatisticSituationRegistration]
+}
+
+type Query {
+    getStatisticsAluno: Statistic
+}
