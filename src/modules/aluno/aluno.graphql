@@ -1,0 +1,18 @@
+scalar Date
+scalar Number
+
+type Aluno {
+  cpf:String
+  etnia:String
+  sexo:String
+  escolaOrigem:String
+  rendaFamiliar:String
+  estado:String
+  cidade:String
+  dataNascimento:Date
+  matrSituacao:String 
+}
+
+type Query{
+  getAllAlunos:[Aluno]
+}

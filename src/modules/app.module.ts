@@ -1,8 +1,9 @@
 import { Global, Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { join } from 'path';
+import { AlunoModule } from './aluno/aluno.module';
 
-import { StatisticModule } from './aluno/statistic.module';
+import { StatisticModule } from './statistic/statistic.module';
 
 @Global()
 @Module({
@@ -30,6 +31,7 @@ import { StatisticModule } from './aluno/statistic.module';
             ],
         }),
         StatisticModule,
+        AlunoModule,
     ],
 })
 export class AppModule {}

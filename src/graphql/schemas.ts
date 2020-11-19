@@ -6,7 +6,21 @@
 
 /* tslint:disable */
 /* eslint-disable */
+export class Aluno {
+    cidade?: string;
+    cpf?: string;
+    dataNascimento?: Date;
+    escolaOrigem?: string;
+    estado?: string;
+    etnia?: string;
+    matrSituacao?: string;
+    rendaFamiliar?: string;
+    sexo?: string;
+}
+
 export abstract class IQuery {
+    abstract getAllAlunos(): Aluno[] | Promise<Aluno[]>;
+
     abstract getStatisticsAluno(): Statistic | Promise<Statistic>;
 }
 
