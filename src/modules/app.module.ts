@@ -1,12 +1,15 @@
 import { Global, Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { join } from 'path';
+import { DateScalar } from '../graphql/scalars/Date';
+import { NumberScalar } from '../graphql/scalars/Number';
 import { AlunoModule } from './aluno/aluno.module';
 
 import { StatisticModule } from './statistic/statistic.module';
 
 @Global()
 @Module({
+    providers: [DateScalar, NumberScalar],
     imports: [
         GraphQLModule.forRoot({
             typePaths: ['./**/*.graphql'],
