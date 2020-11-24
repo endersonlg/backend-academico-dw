@@ -66,11 +66,31 @@ export class StatisticService {
             .groupBy('estado', 'cidade');
     }
 
-    groupByAgeCount(): Promise<StatisticAge[]> {
-        return Knex('aluno')
+    async groupByAgeCount(): Promise<StatisticAge[]> {
+        const data: StatisticAge[] = await Knex('aluno')
             .select(Knex.raw('EXTRACT (YEAR FROM AGE(data_nascimento)) as age'))
             .count('* as quantity')
             .groupBy('age');
+
+        const ageInterval: StatisticAge[] = [];
+
+        for (let i = 0; i < 100; i += 10) {
+            const aux = data.filter(
+                (a) => parseInt(a.age) >= i && parseInt(a.age) <= i + 9,
+            );
+            let sumQuantity = 0;
+
+            aux.forEach((a) => {
+                sumQuantity += parseInt(a.quantity);
+            });
+
+            ageInterval.push({
+                age: `${i} - ${i + 9}`,
+                quantity: sumQuantity,
+            });
+        }
+
+        return ageInterval;
     }
 
     groupBySituationRegistration(): Promise<StatisticSituationRegistration[]> {
